@@ -1,0 +1,30 @@
+@import "open-props/open-props.min.css";
+
+/* Uncomment this if you want addiitonal "default" styles applied: */
+/* @import "open-props/normalize.min.css"; */
+
+:root {
+  --text1-light: var(--gray-8);
+  --text2-light: var(--gray-7);
+
+  --surface1-light: var(--yellow-2);
+  --surface2-light: var(--yellow-0);
+  --surface3-light: var(--yellow-1);
+  --surface4-light: var(--yellow-3);
+
+  --accent1-light: var(--blue-4);
+  --accent2-light: var(--green-4);
+}
+
+/* Light Theme and (future) Dark theming */
+:root {
+  --text-1: var(--text1-light);
+  --text-2: var(--text2-light);
+
+  --surface-1: var(--surface1-light);
+  --surface-2: var(--surface2-light);
+  --surface-3: var(--surface3-light);
+
+  --accent-1: var(--accent1-light);
+  --accent-2: var(--accent2-light);
+}

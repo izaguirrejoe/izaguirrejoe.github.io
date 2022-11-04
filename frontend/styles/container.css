@@ -1,0 +1,22 @@
+.container{
+  padding: var(--size-3) var(--size-3);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media(--md-n-above){
+    max-width: var(--size-sm);
+  }
+
+  @media(--lg-n-above){
+    max-width: var(--size-md);
+  }
+
+  @media(--xl-n-above){
+    max-width: var(--size-lg);
+  }
+
+  @media(--xxl-n-above){
+    max-width: var(--size-xl);
+  }
+}
+

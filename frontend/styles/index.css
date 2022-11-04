@@ -1,0 +1,53 @@
+@import "normalize.css";
+@import "variables.css";
+@import "container.css";
+
+/* Import the base Shoelace stylesheet: */
+@import "@shoelace-style/shoelace/dist/themes/light.css";
+
+body {
+  color: var(--text-1);
+  font-family: var(--font-serif);
+}
+
+a {
+  color: var(--green-8);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-1);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div{
+    display: flex;
+    gap: var(--size-4);
+  }
+
+}
+
+.joe-card{
+  width: var(--size-content-3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::part(base){
+    background: var(--green-1);
+  }
+}
+
+.joe-card__content{
+  font-size: var(--font-size-2);
+  line-height: var(--font-lineheight-3);
+}
+
+.main-header{
+  background: var(--surface-2);
+}
+
+.latest-posts{
+  background: var(--surface-1);
+}
