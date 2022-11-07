@@ -3,14 +3,12 @@
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
-  <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
+  <body>
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 
     <main>
       <%= yield %>
     </main>
-
-    <hr style="margin-block: var(--size-5);">
 
     <%= render "footer", metadata: site.metadata %>
   </body>

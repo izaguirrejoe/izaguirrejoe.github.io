@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import 'modern-normalize/modern-normalize.css';
 @import "variables.css";
 @import "container.css";
 
@@ -6,20 +6,31 @@
 @import "@shoelace-style/shoelace/dist/themes/light.css";
 
 body {
+  background: white;
   color: var(--text-1);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+}
+
+p {
+  font-size: var(--font-size-1);
 }
 
 a {
-  color: var(--green-8);
-  text-decoration: underline;
-  text-decoration-color: var(--accent-1);
+  color: var(--blue-8);
+  text-decoration: none;
+  
+  &:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--accent-2);
+    text-decoration-thickness: 2px;
+  }
 }
 
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: var(--size-4);
 
   & > div{
     display: flex;
@@ -28,26 +39,67 @@ nav{
 
 }
 
-.joe-card{
-  width: var(--size-content-3);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  &::part(base){
-    background: var(--green-1);
-  }
+footer{
+  display: flex;
+  justify-content: center;
 }
 
-.joe-card__content{
+.joe-card{
+  display: flex;
+  border: 1px solid var(--gray-2);
+  padding: var(--size-4);
+  align-items: center;
+  gap: var(--size-4);
+  border-radius: var(--radius-3);
+  max-width: 55rem;
+  box-shadow: var(--shadow-2);
+}
+
+.joe-card__name{
+  font-size: var(--font-size-4);
+}
+
+.joe-card__description{
   font-size: var(--font-size-2);
   line-height: var(--font-lineheight-3);
 }
 
-.main-header{
+.latest-posts{
   background: var(--surface-2);
 }
 
-.latest-posts{
-  background: var(--surface-1);
+.home{
+  color: inherit;
+  text-decoration: none;
+}
+
+.post{
+  box-shadow: var(--shadow-2);
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  border: solid 1px var(--accent-2);
+
+}
+
+.post-time{
+  color: var(--text-2);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-1);
+}
+
+.post-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-14), 1fr));
+}
+
+.post_link{
+  color: var(--text-1);
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.tag-wrapper{
+  margin-block: var(--size-3);
 }

@@ -1,0 +1,10 @@
+---
+layout: page
+title: Posts
+---
+
+<% collections.posts.resources.each do |post| %>
+  <div class="post-grid">
+  <%= render "post", post: post %>
+  </div>
+<% end %>

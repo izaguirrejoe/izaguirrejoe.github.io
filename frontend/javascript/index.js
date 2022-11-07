@@ -4,6 +4,8 @@ import * as Turbo from "@hotwired/turbo"
 
 // Example Shoelace components. Mix 'n' match however you like!
 import '@shoelace-style/shoelace/dist/components/card/card.js';
+import '@shoelace-style/shoelace/dist/components/avatar/avatar.js';
+import '@shoelace-style/shoelace/dist/components/tag/tag.js';
 
 
 // Use the public icons folder:

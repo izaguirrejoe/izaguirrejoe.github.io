@@ -1,0 +1,14 @@
+<div class="post">
+  <a href="<%= post.relative_url %>" class="post_link">
+    <div>
+      <h3><%= post.data.title %> </h3>
+      <time class="post-time"> <%= post.data.date.strftime("%b %-d %Y") %> </time>
+      <div class="tag-wrapper">
+        <% post.data.tags.each do |tag| %>
+          <sl-tag variant="warning"> <%= tag.sub("_", " ") %> </sl-tag>
+        <% end %>
+      </div>
+      <p> <%= post.data.description %> </p>
+    </div>
+  </a>
+</div>
