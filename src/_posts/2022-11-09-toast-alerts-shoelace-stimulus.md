@@ -131,7 +131,7 @@ document.addEventListener("turbo:before-render", function() {
 });
 ```
 
-This just removes the toast stack when a Turbo submission begins, if there's a stack already on the page. 
+This just removes the toast stack before Turbo renders a page, if there's a stack already on the page. 
 
 **Messing with the internal implementation of Shoelace's toast alert system feels like a code smell to me.** If you have a better idea as to how to workaround this Turbo-Shoelace bug, please [message me on Twitter](https://twitter.com/izaguirrejoe_) or [shoot me an email.](mailto: izaguirrejoe@gmail.com) I'll be happy to give you credit!
 
