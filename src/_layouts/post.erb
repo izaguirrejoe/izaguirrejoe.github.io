@@ -4,6 +4,12 @@ layout: default
 
 <div class="post-container">
 
+  <div class="post-header">
+    <sl-avatar initials="JI" image="https://res.cloudinary.com/dddjom6k3/image/upload/c_fill,w_300,h_300,q_auto,f_auto,g_face/v1667586463/DSC_1061_jxwfrg.jpg" label="That's me!" style="--size: var(--size-8);"> </sl-avatar>
+    <p class="post-header__name"> Joseph Izaguirre </p>
+  </div>
+
+  <time style="font-weight: var(--font-weight-3); color: var(--gray-6);"> <%= resource.data.date.strftime("%b %-d %Y") %> </time>
   <h1><%= resource.data.title %></h1>
 
   <%= yield %>

@@ -13,7 +13,7 @@ body {
 
 p {
   font-size: var(--font-size-3);
-  line-height: var(--font-lineheight-3);
+  line-height: var(--font-lineheight-4);
 }
 
 a {
@@ -61,7 +61,7 @@ footer{
   font-size: var(--font-size-4);
 }
 
-.joe-card__description{
+.joe-card__description > p{
   font-size: var(--font-size-2);
   line-height: var(--font-lineheight-3);
 }
@@ -83,10 +83,10 @@ footer{
 
 }
 
-.post-time{
-  color: var(--text-2);
+.post__time{
+  color: var(--gray-6);
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-1);
+  font-weight: var(--font-weight-3);
 }
 
 .post-grid{
@@ -104,4 +104,20 @@ footer{
 
 .tag-wrapper{
   margin-block: var(--size-3);
+}
+
+.post-header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.post-header__name{
+	margin-top: var(--size-2);
+	font-weight: var(--font-weight-3);
+}
+
+.post__description{
+	font-size: var(--font-size-1);
 }

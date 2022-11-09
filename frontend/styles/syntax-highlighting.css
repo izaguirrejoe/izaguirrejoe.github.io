@@ -14,7 +14,17 @@ pre.highlight {
   background-color: #F6F8FA;
   color: white;
   line-height: var(--font-lineheight-4);
+	border-radius: var(--radius-2);
 }
+
+code.highlighter-rouge{
+	font-size: inherit;
+	font-weight: var(--font-weight-5);
+	background-color: var(--gray-1);
+	padding: var(--size-1) var(--size-1);
+	border-radius: var(--radius-2);
+}
+
 
 .highlight pre { background-color: #272822; }
 .highlight .hll { background-color: #272822; }
