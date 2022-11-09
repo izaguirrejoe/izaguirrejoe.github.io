@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Toast alerts with Turbo, Stimulus and Shoelace in Rails"
-date:   2022-11-07 14:29:31 -0700
+date:   2022-11-09 14:00:00 -0800
 tags: Shoelace Turbo Turbo_Native 
 description: "How to create nice toast alerts with Turbo and Shoelace in Ruby on Rails"
 template_engine: md
@@ -122,11 +122,11 @@ All this is doing is calling the `toast()` method when the alert controller dete
 
 That's *mostly* it. There is a slight bug, however. Try creating a post, then deleting that post from the same page. The first alert appears! But the second doesn't pop up. This is where we have to make Turbo play nice with Shoelace's toast alert system. When an alert is toasted, Shoelace creates a `div` with a class of `sl-toast-stack`. Shoelace then manages this div internally, waiting until all of the alerts are gone before removing the stack. 
 
-It looks like we have to manually remove the toast stack upon form submission. Add this to `application.js` and you should be good to go: 
+It looks like we have to manually remove the toast stack before the page is rendered. Turbo provides a `before-render` event we can use. Add this to `application.js` and you should be good to go: 
 
 ```javascript
 // app/javascript/application.js
-document.addEventListener("turbo:submit-start", function() {
+document.addEventListener("turbo:before-render", function() {
   document.body.querySelector("div.sl-toast-stack")?.remove();
 });
 ```
