@@ -122,18 +122,18 @@ All this is doing is calling the `toast()` method when the alert controller dete
 
 That's *mostly* it. There is a slight bug, however. Try creating a post, then deleting that post from the same page. The first alert appears! But the second doesn't pop up. This is where we have to make Turbo play nice with Shoelace's toast alert system. When an alert is toasted, Shoelace creates a `div` with a class of `sl-toast-stack`. Shoelace then manages this div internally, waiting until all of the alerts are gone before removing the stack. 
 
-It looks like we have to manually remove the toast stack before the page is rendered. Turbo provides a `before-render` event we can use. Add this to `application.js` and you should be good to go: 
+It looks like we have to manually remove the toast stack before the page is rendered. Turbo provides a `before-submit` event we can use. Add this to `application.js` and you should be good to go: 
 
 ```javascript
 // app/javascript/application.js
-document.addEventListener("turbo:before-render", function() {
+document.addEventListener("turbo:submit-start", function() {
   document.body.querySelector("div.sl-toast-stack")?.remove();
 });
 ```
 
-This just removes the toast stack before Turbo renders a page, if there's a stack already on the page. 
+This just removes the toast stack on the start of every form submission, just in case there's a stack already on the page. 
 
-**Messing with the internal implementation of Shoelace's toast alert system feels like a code smell to me.** If you have a better idea as to how to workaround this Turbo-Shoelace bug, please [message me on Twitter](https://twitter.com/izaguirrejoe_) or [shoot me an email.](mailto: izaguirrejoe@gmail.com) I'll be happy to give you credit!
+Messing with the internal implementation of Shoelace's toast alert system **feels like a code smell to me.**  If you have a better idea as to how to workaround this Turbo-Shoelace bug, please [message me on Twitter](https://twitter.com/izaguirrejoe_) or [shoot me an email.](mailto: izaguirrejoe@gmail.com) I'll be happy to give you credit!
 
 That's all! You now have a slick toast alert system that uses the tried-and-true Rails flash system.
 
