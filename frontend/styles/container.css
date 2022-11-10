@@ -24,6 +24,7 @@
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+	padding-inline: var(--size-4);
   margin-bottom: var(--size-14);
 }
 

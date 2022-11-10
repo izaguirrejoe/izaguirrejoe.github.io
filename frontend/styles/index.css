@@ -48,6 +48,7 @@ footer{
 
 .joe-card{
   display: flex;
+	flex-direction: column;
   border: 1px solid var(--gray-2);
   padding: var(--size-4);
   align-items: center;
@@ -55,6 +56,10 @@ footer{
   border-radius: var(--radius-3);
   max-width: 55rem;
   box-shadow: var(--shadow-2);
+
+	@media (--md-n-above){
+		flex-direction: row;
+	}
 }
 
 .joe-card__name{
