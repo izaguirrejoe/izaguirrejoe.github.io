@@ -126,3 +126,18 @@ footer{
 .post__description{
 	font-size: var(--font-size-1);
 }
+
+
+.page-footer {
+  margin-top: var(--size-10);
+  & > p{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-2);
+    color: var(--teal-9);
+  }
+}
+
+.page-footer__head{
+  font-weight: var(--font-weight-3);
+  text-align: center;
+}
