@@ -11,9 +11,14 @@ body {
   font-family: var(--font-sans);
 }
 
-p {
+:where(p) {
   font-size: var(--font-size-3);
   line-height: var(--font-lineheight-4);
+}
+
+.footnotes p, .footnotes ol{
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-2);
 }
 
 a {
