@@ -203,7 +203,7 @@ func route(url: URL, options: VisitOptions, properties: PathProperties) {
 
 This will interrupt the routing if a visit is proposed to any of the three dummy routes, and take appropriate action. In the case of the `recede` route, we're going to simply pop the view controller. Here's what the final result looks like. 
 
-![correct navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669767504/group-post-correct_zgaxhr.gif)
+![correct navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669848701/Simulator_Screen_Recording_-_iPhone_14_Pro_-_2022-11-30_at_14.48.46_jmei6w.gif)
 
 The power of this method is that we continue with the same Post controller as before, simply changing `redirect_to` to `recede_or_redirect_to` upon successfull post creation. You now have a majestic monolith, elegantly adapting to both web browsers and Turbo Native apps.
 
