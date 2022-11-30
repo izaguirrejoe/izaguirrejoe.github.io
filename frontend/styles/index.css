@@ -101,7 +101,8 @@ footer{
 
 .post-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--size-14), 1fr));
+  gap: var(--size-4);
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-13), 1fr));
 }
 
 .post_link{

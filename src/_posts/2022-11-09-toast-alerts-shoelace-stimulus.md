@@ -137,6 +137,8 @@ Messing with the internal implementation of Shoelace's toast alert system **feel
 
 That's all! You now have a slick toast alert system that uses the tried-and-true Rails flash system.
 
+![demo](https://res.cloudinary.com/dddjom6k3/image/upload/v1669767504/group-post-correct_zgaxhr.gif)
+
 ## Bonus: Toast alerts in a Turbo Native app ##
 
 One of the common form submission workflows in a Turbo Native app is to present the `new` page in a modal with a seperate `Session`, which passes the response HTML to the original `Session`. [This can be seen in the demo application.](https://github.com/hotwired/turbo-ios/tree/main/Demo) This is the equivalent of opening two separate windows in a browser, and can wreak havoc on Shoelace's internal handling of the toast alerts. A workaround is to hide all alerts on each Turbo navigation, ensuring that there's no Toast stack present on any page when receiving the response HTML:
@@ -153,6 +155,7 @@ document.addEventListener("turbo:before-visit", function() {
 ``` 
 
 Now your toast alert system works in both web browsers *and* Turbo Native apps!
+
 
 
 [^1]: For an alternative implementation of Toast notifications using the brand-new Custom Stream Actions in Turbo 7.2, check out [Marco Roth's excellent tutorial.](https://marcoroth.dev/posts/guide-to-custom-turbo-stream-actions)
