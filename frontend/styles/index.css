@@ -51,9 +51,18 @@ footer{
   margin-block: var(--size-8);
 }
 
+.home-container{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  margin-block: var(--size-9); 
+  margin-inline: var(--size-4);
+  gap: var(--size-9);
+}
+
 .joe-card{
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
   border: 1px solid var(--gray-2);
   padding: var(--size-4);
   align-items: center;
@@ -62,9 +71,22 @@ footer{
   max-width: 55rem;
   box-shadow: var(--shadow-2);
 
-	@media (--md-n-above){
-		flex-direction: row;
-	}
+  @media (--md-n-above){
+    flex-direction: row;
+  }
+}
+
+.latest-posts{
+  width: 100%;
+  padding-block: var(--size-6);
+
+  & > .latest-posts__heading{
+    padding-bottom: var(--size-6);
+
+    @media(--md-n-above){
+      padding-left: var(--size-9);
+    }
+  }
 }
 
 .joe-card__name{
@@ -76,21 +98,18 @@ footer{
   line-height: var(--font-lineheight-3);
 }
 
-.latest-posts{
-  background: var(--surface-2);
-}
-
 .home{
   color: inherit;
   text-decoration: none;
 }
 
 .post{
+  background: white;
   box-shadow: var(--shadow-2);
   padding: var(--size-4);
   border-radius: var(--radius-3);
   border: solid 1px var(--accent-2);
-
+  width: var(--size-14);
 }
 
 .post__time{
@@ -100,9 +119,10 @@ footer{
 }
 
 .post-grid{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--size-4);
-  grid-template-columns: repeat(auto-fill, minmax(var(--size-13), 1fr));
+  justify-content: center;
 }
 
 .post_link{
@@ -118,19 +138,19 @@ footer{
 }
 
 .post-header{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .post-header__name{
-	margin-top: var(--size-2);
-	font-weight: var(--font-weight-3);
+  margin-top: var(--size-2);
+  font-weight: var(--font-weight-3);
 }
 
 .post__description{
-	font-size: var(--font-size-1);
+  font-size: var(--font-size-1);
 }
 
 
@@ -147,3 +167,4 @@ footer{
   font-weight: var(--font-weight-3);
   text-align: center;
 }
+
