@@ -133,7 +133,7 @@ document.addEventListener("turbo:submit-start", function() {
 
 This just removes the toast stack on the start of every form submission, just in case there's a stack already on the page. 
 
-Messing with the internal implementation of Shoelace's toast alert system **feels like a code smell to me.**  If you have a better idea as to how to workaround this Turbo-Shoelace bug, please [message me on Twitter](https://twitter.com/izaguirrejoe_) or [shoot me an email.](mailto: izaguirrejoe@gmail.com) I'll be happy to give you credit!
+Messing with the internal implementation of Shoelace's toast alert system **feels like a code smell to me.**  If you have a better idea as to how to workaround this Turbo-Shoelace bug, please [message me on Twitter](https://twitter.com/izaguirrejoe_) or [shoot me an email.](mailto: izaguirrejoe@hey.com) I'll be happy to give you credit!
 
 That's all! You now have a slick toast alert system that uses the tried-and-true Rails flash system.
 
