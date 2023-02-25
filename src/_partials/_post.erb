@@ -1,14 +1,12 @@
-<div class="post">
-  <a href="<%= post.relative_url %>" class="post_link">
-    <div>
-      <h3><%= post.data.title %> </h3>
-      <time class="post__time"> <%= post.data.date.strftime("%b %-d %Y") %> </time>
-      <div class="tag-wrapper">
-        <% post.data.tags.each do |tag| %>
-          <sl-tag variant="primary"> <%= tag.sub("_", " ") %> </sl-tag>
-        <% end %>
-      </div>
-      <p class="post__description"> <%= post.data.description %> </p>
-    </div>
-  </a>
+<div class="card">
+  <stack-l space="var(--size-4)">
+    <%= link_to post.data.title, post, class:"font-bold text-lg text-color-emphasis" %>
+    <time class="text-sm"> <%= post.data.date.strftime("%b %-d %Y") %> </time>
+    <cluster-l space="var(--size-1)">
+      <% post.data.tags.each do |tag| %>
+        <sl-tag variant="primary" size="small"> <%= tag.sub("_", " ") %> </sl-tag>
+      <% end %>
+    </cluster-l>
+    <p> <%= post.data.description %> </p>
+  </stack-l>
 </div>

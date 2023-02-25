@@ -1,30 +1,25 @@
 .container{
-  padding: var(--size-3) var(--size-3);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  padding-inline: var(--size-fluid-1);
 
-  @media(--md-n-above){
+  @media(--sm-n-above){
     max-width: var(--size-sm);
   }
 
-  @media(--lg-n-above){
+  @media(--md-n-above){
     max-width: var(--size-md);
   }
 
-  @media(--xl-n-above){
+  @media(--lg-n-above){
     max-width: var(--size-lg);
+  }
+  
+  @media(--xl-n-above){
+    max-width: var(--size-xl);
   }
 
   @media(--xxl-n-above){
-    max-width: var(--size-xl);
+    max-width: var(--size-xxl);
   }
-}
-
-.post-container{
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-	padding-inline: var(--size-4);
-  margin-bottom: var(--size-12);
 }
 

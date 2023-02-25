@@ -2,24 +2,30 @@
 layout: default
 ---
 
-<div class="post-container">
 
-  <div class="post-header">
-    <sl-avatar initials="JI" image="https://res.cloudinary.com/dddjom6k3/image/upload/c_fill,w_300,h_300,q_auto,f_auto,g_face/v1667586463/DSC_1061_jxwfrg.jpg" label="That's me!" style="--size: var(--size-8);"> </sl-avatar>
-    <p class="post-header__name"> Joseph Izaguirre </p>
-  </div>
+<center-l max="var(--size-content-3);">
+  <center-l intrinsic=true andText=true>
+    <stack-l space="var(--size-2)">
+      <sl-avatar initials="JI" image="https://res.cloudinary.com/dddjom6k3/image/upload/c_fill,w_300,h_300,q_auto,f_auto,g_face/v1667586463/DSC_1061_jxwfrg.jpg" label="That's me!" style="--size: var(--size-8);"> </sl-avatar>
+      <div> Joseph Izaguirre </div>
+    </stack-l>
+  </center-l>
 
-  <time style="font-weight: var(--font-weight-3); color: var(--gray-6);"> <%= resource.data.date.strftime("%b %-d %Y") %> </time>
+  <time class="text-sm" style="font-weight: var(--font-weight-3)"> <%= resource.data.date.strftime("%b %-d %Y") %> </time>
   <h1><%= resource.data.title %></h1>
 
   <%= yield %>
 
-  <div class="page-footer">
+  <div style="margin-block: var(--size-8);">
 
-    <p class="page-footer__head">ABOUT ME</p>
-    <p> I'm Joseph Izaguirre, a web dev focusing on Ruby, Rails, Hotwire, and Turbo Native. If you'd like to get in contact, reach out to me on Twitter at <%= link_to "@izaguirrejoe_", "https://twitter.com/izaguirrejoe_" %> or email me at <a href="mailto:<%= site.metadata.email %>"> <%= site.metadata.email %> </a> 
-    </p>
+    <center-l andText=true>
+      <stack-l>
+        <div> ABOUT ME</div>
+        <p> I'm Joseph Izaguirre, a web dev focusing on Ruby, Rails, Hotwire, and Turbo Native. If you'd like to get in contact, reach out to me on Twitter at <%= link_to "@izaguirrejoe_", "https://twitter.com/izaguirrejoe_" %> or email me at <a href="mailto:<%= site.metadata.email %>"> <%= site.metadata.email %> </a> 
+        </p>
+      </stack-l>
+    </center-l>
 
   </div>
 
-</div>
+</center-l>

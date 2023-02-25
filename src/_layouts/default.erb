@@ -3,13 +3,15 @@
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
-  <body>
+  <body class="container">
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 
     <main>
       <%= yield %>
     </main>
 
-    <%= render "footer", metadata: site.metadata %>
+    <center-l intrinsic=true style="margin-block: var(--size-8);">
+      <%= render "footer", metadata: site.metadata %>
+    </center-l>
   </body>
 </html>

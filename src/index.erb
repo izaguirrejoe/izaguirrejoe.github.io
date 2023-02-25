@@ -2,29 +2,33 @@
 
 ---
 
-<div class="home-container">
-  <div class="joe-card">
+<center-l intrinsic=true style="margin-block: var(--size-fluid-4);">
+  <sl-card>
+    <cluster-l style="align-items: center;">
       <sl-avatar initials="JI" image="https://res.cloudinary.com/dddjom6k3/image/upload/c_fill,w_300,h_300,q_auto,f_auto,g_face/v1667586463/DSC_1061_jxwfrg.jpg" label="That's me!" style="--size: var(--size-11);"> </sl-avatar>
-      <div>
-        <span class="joe-card__name"> Hi, I'm <strong> Joseph Izaguirre </strong> </span>
-          <div class="joe-card__description">
+      <stack-l>
+        <header class="text-lg"> Hi, I'm <strong> Joseph Izaguirre </strong> </header>
+        <div>
+          <stack-l space="var(--size-4)">
             <p> I'm a developer working at the intersection of <strong> Ruby on Rails, Turbo, Stimulus, Turbo Native (Swift / iOS), and Web Components.</strong> I enjoy making web apps and hybrid mobile apps using standard web technologies (HTML, CSS, Javascript) and <%= link_to "majestic monoliths", "https://m.signalvnoise.com/the-majestic-monolith/" %> to empower small teams to do more with less.  </p>
             <p> Currently working on <%= link_to "GroupUp", "https://apps.apple.com/us/app/groupup-find-local-groups/id6444784184" %>, an app to find and form local groups. Follow me on Twitter at <%= link_to "@izaguirrejoe_", "https://twitter.com/izaguirrejoe_" %> or shoot me an email at <a href="mailto:<%= site.metadata.email %>"> <%= site.metadata.email %> </a>
-          <p> Talk to me about good urbanism and walkable communities.</p>
+            <p> Talk to me about good urbanism and walkable communities.</p>
+          </stack-l>
         </div>
-      </div>
+      </stack-l>
+    </cluster-l>
+  </sl-card>
+</center-l>
 
-  </div>
 
-  <div class="latest-posts">
-    <h2 class="latest-posts__heading"> Latest Posts </h2>
-    
-    <div class="post-grid">
-      <% collections.posts.resources.each do |post| %>
-          <%= render "post", post: post %>
-      <% end %>
-    </div>
-  </div>
 
-</div>
+<center-l intrinsic=true max="var(--content-size-3)">
+<div class="font-bold text-color-emphasis" style="font-size: var(--font-size-fluid-3); margin-block: var(--size-8);"> Latest Posts </div>
+  <grid-l>
+    <% collections.posts.resources.each do |post| %>
+      <%= render "post", post: post %>
+    <% end %>
+  </grid-l>
+</center-l>
+
 
