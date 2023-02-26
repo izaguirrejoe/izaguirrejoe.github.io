@@ -3,8 +3,8 @@ layout: page
 title: Posts
 ---
 
-<div class="post-grid">
+<stack-l>
   <% collections.posts.resources.each do |post| %>
     <%= render "post", post: post %>
   <% end %>
-</div>
+</stack-l>

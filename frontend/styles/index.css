@@ -1,5 +1,6 @@
-@import 'modern-normalize/modern-normalize.css';
-@import "variables.css";
+@import "open-props/open-props.min.css";
+@import "open-props/media.min.css";
+@import "open-props/normalize.light.min.css";
 @import "container.css";
 @import "utilities.css";
 @import "@shoelace-style/shoelace/dist/themes/light.css";
@@ -12,6 +13,7 @@
   --text-lg: var(--font-size-3);
   --link: var(--brand);
   --link-visited: var(--brand);
+  --brand: var(--teal-8);
 }
 
 html{
@@ -27,6 +29,18 @@ body {
 
 h1{
   font-size: var(--font-size-fluid-3);
+}
+
+h2{
+  font-size: var(--font-size-fluid-2);
+}
+
+h3{
+  font-size: var(--font-size-fluid-1);
+}
+
+p{
+  padding-block: var(--size-3);
 }
 
 strong{
@@ -48,6 +62,11 @@ a, a:visited {
   }
 }
 
+pre{
+  max-width: none;
+  font-size: var(--font-size-1);
+}
+
 .card{
   box-shadow: var(--shadow-3);
   padding: var(--size-6);
@@ -59,4 +78,13 @@ a, a:visited {
   &:hover{
     box-shadow: var(--shadow-4);
   }
+}
+
+center-l p img{
+  margin-inline: auto;
+  box-shadow: var(--shadow-4);
+}
+
+sl-card::part(base){
+  border-radius: var(--radius-3);
 }

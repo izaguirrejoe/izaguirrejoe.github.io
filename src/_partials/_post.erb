@@ -1,5 +1,5 @@
 <div class="card">
-  <stack-l space="var(--size-4)">
+  <stack-l space="var(--size-2)">
     <%= link_to post.data.title, post, class:"font-bold text-lg text-color-emphasis" %>
     <time class="text-sm"> <%= post.data.date.strftime("%b %-d %Y") %> </time>
     <cluster-l space="var(--size-1)">
@@ -7,6 +7,6 @@
         <sl-tag variant="primary" size="small"> <%= tag.sub("_", " ") %> </sl-tag>
       <% end %>
     </cluster-l>
-    <p> <%= post.data.description %> </p>
   </stack-l>
+  <p> <%= post.data.description %> </p>
 </div>
