@@ -47,6 +47,10 @@ strong{
   font-weight: var(--font-bold);
 }
 
+ol + h2{
+  margin-block-start: var(--size-4);
+}
+
 a, a:visited {
   user-select: none;
   -webkit-user-drag: none;
@@ -67,6 +71,16 @@ pre{
   font-size: var(--font-size-1);
 }
 
+
+center-l p img{
+  margin-inline: auto;
+  box-shadow: var(--shadow-4);
+}
+
+sl-card::part(base){
+  border-radius: var(--radius-3);
+}
+
 .card{
   box-shadow: var(--shadow-3);
   padding: var(--size-6);
@@ -80,11 +94,3 @@ pre{
   }
 }
 
-center-l p img{
-  margin-inline: auto;
-  box-shadow: var(--shadow-4);
-}
-
-sl-card::part(base){
-  border-radius: var(--radius-3);
-}

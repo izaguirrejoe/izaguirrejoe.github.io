@@ -20,9 +20,11 @@
 
 
 
-<center-l intrinsic=true max="var(--content-size-3)">
-  <h1  style="margin-block: var(--size-8);"> Latest Posts </h1>
-  <grid-l>
+<center-l max="60rem">
+  <center-l intrinsic=true>
+    <h1  style="margin-block: var(--size-8);"> Latest Posts </h1>
+  </center-l>
+  <grid-l space="var(--size-6);">
     <% collections.posts.resources.each do |post| %>
       <%= render "post", post: post %>
     <% end %>
