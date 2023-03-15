@@ -7,7 +7,7 @@ description: "My journey to a junior Rails developer position."
 template_engine: md
 ---
 
-I remember watching an [interview with Mike Rowe](https://youtu.be/qzKzu86Agg0?t=1054) from Dirty Jobs a few years ago. He recounted a day he had spent with the owner of a septic tank cleaning business. Standing knee deep in other people's waste, Mike asked the owner how he came to do the job that he does. He responded that he was a guidance counselor before, and knew that he wanted to change jobs. He then said something that always stuck with me:
+I remember watching an [interview with Mike Rowe](https://youtu.be/qzKzu86Agg0?t=1054) from Dirty Jobs a few years ago. He recounted a day he had spent with the owner of a septic tank cleaning business. Standing knee-deep in other people's waste, Mike asked the owner how he came to do the job that he does. He responded that he was a guidance counselor before, and knew that he wanted to change jobs. He then said something that always stuck with me:
 
 > When it came time to make the change, he just looked around to see where everyone else was going, and just went the other way.
 
@@ -21,7 +21,7 @@ I'm happy to report that the advice of the owner of the septic tank business is 
 
 Being a framework that's been around for almost 20 years, a lot of the older Rails developers have seen trends come and go, and tend to emphasize boring [vanilla web technologies](https://www.spicyweb.dev/). This is a big plus for employability! Server-side rendered HTML, CSS and Javascript aren't going to disappear any time soon. Many of the communities forming around new Javascript frameworks are populated with young developers, many of whom go down unproductive paths that older developers have seen fail time and time again. Many of these communities are like the blind leading the blind. Being part of a community with many older developers is not a negative, **it's a plus!** 
 
-Rails is [Lindy](https://en.wikipedia.org/wiki/Lindy_effect); it's been around for 20 years, so it'll probably be around for another 20. I wouldn't worry about long-term employability!
+Rails is [Lindy](https://en.wikipedia.org/wiki/Lindy_effect); it's been around for 20 years, so it'll probably be around for another 20. A great sign for long-term employability!
 
 This post is to reassure those looking for their first developer job in Rails, and to provide some resources to help in the job search. I strongly suggest reading Felipe Vogel's [blog post](https://fpsvogel.com/posts/2022/how-to-find-ruby-rails-job) first, I learned a lot of tips that I used in my own journey. 
 
