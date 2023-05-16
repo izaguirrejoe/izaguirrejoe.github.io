@@ -89,7 +89,7 @@ Let's start with the routes. `turbo-rails` creates three new routes to use in yo
 
 Why are these necessary? Consider a Rails app with `Group`s that have `Post`s, with the following post creation flow:
 
-![normal navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669768980/normal-nav_tjg0qo.png)
+![normal navigation](/images/normal-navigation.png)
 
 ```ruby
 #The post controller as it stands
@@ -111,11 +111,11 @@ end
 
 This is fine for the web, but it looks strange in a native app:
 
-![incorrect navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669767660/group-post-incorrect_qkqpqb.gif)
+![incorrect navigation](/images/group-post-incorrect.gif)
 
 We're stacking the group show page on top of the new post page, when what we actually wanted was to simply pop the post page to go back to the group page on succesfull post creation. This is the desired post creation flow *on a Native app*:
 
-![native navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669768980/native-nav_cgmnx4.png)
+![native navigation](/images/native-navigation.png)
 
 How do we acheive the desired navigation flow? **This is where the helpers shown in the beginning of the article come in.**
 
@@ -203,7 +203,7 @@ func route(url: URL, options: VisitOptions, properties: PathProperties) {
 
 This will interrupt the routing if a visit is proposed to any of the three dummy routes, and take appropriate action. In the case of the `recede` route, we're going to simply pop the view controller. Here's what the final result looks like. 
 
-![correct navigation](https://res.cloudinary.com/dddjom6k3/image/upload/v1669848701/Simulator_Screen_Recording_-_iPhone_14_Pro_-_2022-11-30_at_14.48.46_jmei6w.gif)
+![correct navigation](/images/group-post-correct.gif)
 
 The power of this method is that we continue with the same Post controller as before, simply changing `redirect_to` to `recede_or_redirect_to` upon successfull post creation. You now have a majestic monolith, elegantly adapting to both web browsers and Turbo Native apps.
 

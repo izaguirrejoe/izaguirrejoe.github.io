@@ -137,7 +137,7 @@ Messing with the internal implementation of Shoelace's toast alert system **feel
 
 That's all! You now have a slick toast alert system that uses the tried-and-true Rails flash system.
 
-![demo](https://res.cloudinary.com/dddjom6k3/image/upload/v1669767504/group-post-correct_zgaxhr.gif)
+![Succesfull Submission](/images/group-post-correct.gif)
 
 ## Bonus: Toast alerts in a Turbo Native app ##
 
